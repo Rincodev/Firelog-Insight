@@ -1,0 +1,14 @@
+# .NET / WPF
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Secrets / local config
+db_credentials.json
+*.secrets.json
+
+# OS
+.DS_Store
+Thumbs.db
