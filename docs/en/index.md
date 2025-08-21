@@ -50,16 +50,6 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 [!CAUTION]
 Desktop apps cannot fully hide secrets. Use least-privilege DB roles and rotate passwords if leaked.
 
-## Features (technical)
-
-Charts drawn on WPF Canvas (PathGeometry, ArcSegment, IsLargeArc); PNG export via RenderTargetBitmap
-
-Top-protocols bar chart (grouping, scaling by max count)
-
-CSV/TXT exporters with proper escaping and summary stats
-
-Optional DB integration (pooler host for IPv4 compatibility)
-
 ## Team & Contributors
 Bohdan — @Rincodev
 
