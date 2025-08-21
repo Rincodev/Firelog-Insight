@@ -51,19 +51,19 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 Desktop apps cannot fully hide secrets. Use least-privilege DB roles and rotate passwords if leaked.
 
 ## Team & Contributors
-Bohdan —— @Rincodev
+Bohdan ——> @Rincodev
 
 Teamlead, development & release; architecture & security; DB connect/config; DB extract & export; integration & code merging; UI wiring (actions/handlers); charts; exports; stabilization & tests.
 
-Štefan —— @Just-Kurumi 
+Štefan ——> @Just-Kurumi 
 
 UI/UX; XAML layouts & visual theme; navigation/menus; tables/grids.
 
-Hanuš —— @Menk1l
+Hanuš ——> @Menk1l
 
 Architecture & data↔UI integration; filtering/search; PowerShell integration; local log processing; Security Alerts UI; Windows Firewall log parser; testing.
 
-Lukáš —— @Tykanek
+Lukáš ——> @Tykanek
 
 Authentication (Login/Logout); control→logic wiring; IP/time filters; testing.
 
