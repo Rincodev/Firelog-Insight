@@ -56,6 +56,7 @@ Bohdan — @Rincodev
 Teamlead, development & release; architecture & security; DB connect/config; DB extract & export; integration & code merging; UI wiring (actions/handlers); charts; exports; stabilization & tests.
 
 Štefan - @Just-Kurumi 
+
 UI/UX; XAML layouts & visual theme; navigation/menus; tables/grids.
 
 Hanuš — @Menk1l
