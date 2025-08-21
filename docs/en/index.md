@@ -63,7 +63,7 @@ UI/UX; XAML layouts & visual theme; navigation/menus; tables/grids.
 Architecture & data↔UI integration; filtering/search; PowerShell integration; local log processing; Security Alerts UI; Windows Firewall log parser; testing.
 
 **Lukáš ——> @Tykanek**  
-Authentication (Login/Logout); control→logic wiring; IP/time filters; testing.
+UI/UX; Authentication (Login/Logout); control→logic wiring; IP/time filters; testing.
 
 Contributors: @Menk1l (Hanuš Hart) • @Tykanek (Lukáš Elbl) • @Rincodev (Rincodev) • @Just-Kurumi (Kurumi)
 
