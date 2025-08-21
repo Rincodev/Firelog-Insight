@@ -12,14 +12,11 @@ Desktop tool (WPF, .NET) for Windows Firewall log analysis.
 ```bash
 dotnet restore
 dotnet build -c Release
-Configuration
+## Configuration
 Do not commit real credentials. Use env vars or a local file next to the executable.
 
 Env (recommended):
 
-ini
-Копировать
-Редактировать
 APP_DB_HOST=aws-0-eu-central-1.pooler.supabase.com
 APP_DB_PORT=5432
 APP_DB_USER=postgres.<instance-id>
@@ -27,10 +24,6 @@ APP_DB_PASSWORD=<secret>
 APP_DB_NAME=postgres
 APP_DB_SSLMODE=Require
 Local file (fallback, not tracked): db_credentials.json
-
-json
-Копировать
-Редактировать
 {
   "Host": "aws-0-eu-central-1.pooler.supabase.com",
   "Port": 5432,
@@ -41,12 +34,9 @@ json
 }
 Connection string (Npgsql):
 
-ini
-Копировать
-Редактировать
 Host={Host};Port={Port};Username={User};Password={Password};Database={Database};
 SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
-Security Notes
+## Security Notes
 Secrets: never commit; rotate if leaked; .gitignore keeps db_credentials.json out of VCS.
 
 DB: use a least-privilege role (not postgres); RLS if multi-tenant.
