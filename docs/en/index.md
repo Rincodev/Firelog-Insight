@@ -1,5 +1,7 @@
 # FireLog-Insight (English)
 
+**Language:** [Čeština](../cs/index.md) • [Русский](../ru/index.md) • [Українська](../uk/index.md)
+
 ## Overview
 Desktop tool (WPF, .NET) for Windows Firewall log analysis.
 - Filters by IP, time, action/type
@@ -14,11 +16,15 @@ dotnet restore
 dotnet build -c Release
 ```
 ## Configuration
-Do not commit real credentials. Use env vars or a local file next to the executable.
+[!IMPORTANT]
 
-Env (recommended):
+-Do not commit real credentials. Use environment variables or a local file next to the executable.
 
-```APP_DB_HOST=aws-0-eu-central-1.pooler.supabase.com
+-On IPv4 networks use the Session Pooler host; on IPv6 you may use a direct connection.
+
+-Environment variables (recommended)
+```
+APP_DB_HOST=aws-0-eu-central-1.pooler.supabase.com
 APP_DB_PORT=5432
 APP_DB_USER=postgres.<instance-id>
 APP_DB_PASSWORD=<secret>
@@ -41,41 +47,38 @@ Connection string (Npgsql):
 Host={Host};Port={Port};Username={User};Password={Password};Database={Database};
 SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 ```
-## Security Notes
-Secrets: never commit; rotate if leaked; .gitignore keeps db_credentials.json out of VCS.
+[!CAUTION]
+Desktop apps cannot fully hide secrets. Use least-privilege DB roles and rotate passwords if leaked.
 
-DB: use a least-privilege role (not postgres); RLS if multi-tenant.
+## Features (technical)
 
-TLS: SslMode=Require (or VerifyFull if you validate CN/CA).
+Charts drawn on WPF Canvas (PathGeometry, ArcSegment, IsLargeArc); PNG export via RenderTargetBitmap
 
-Passwords: bcrypt (no plaintext storage).
+Top-protocols bar chart (grouping, scaling by max count)
+
+CSV/TXT exporters with proper escaping and summary stats
+
+Optional DB integration (pooler host for IPv4 compatibility)
 
 ## Team & Contributors
-Rinco — Team lead; security & DB; rewrote DB connectivity (migrated from hardcoded school DB); parsing & exports; charts; testing.
+Bohdan — @Rincodev
 
-Štefan — UI/visuals; XAML; menus; data source picker.
+Lead, development & release; architecture & security; DB connect/config; DB extract & export; integration & code merging; UI wiring (actions/handlers); charts; exports; stabilization & tests.
 
-Hanuš — Architecture; data↔UI wiring; filtering; PowerShell integration; DB extract; testing.
+Štefan
+UI/UX; XAML layouts & visual theme; navigation/menus; tables/grids.
 
-Lukáš — Security Alerts UI; auth menu; controls wiring; filters; testing.
+Hanuš — @Menk1l
+
+Architecture & data↔UI integration; filtering/search; PowerShell integration; local log processing; Security Alerts UI; Windows Firewall log parser; testing.
+
+Lukáš — @Tykanek
+
+Authentication (Login/Logout); control→logic wiring; IP/time filters; testing.
 
 Contributors: @Menk1l (Hanuš Hart) • @Tykanek (Lukáš Elbl) • @Rincodev (Rinco) • @Just-Kurumi (Kurumi)
 
-## Roadmap
-Robust parser (column validation, skip bad lines, invariant dates)
-
-Async DB I/O; timeouts; transient retry
-
-DataGrid virtualization & paging for large logs
-
-Central logging (Serilog/NLog), optional Npgsql tracing
-
-First-run config prompt (writes user-scope config)
-
-Unit tests for parser/export
-
-DPI-aware PNG export, better legends
-
 ## License
+Licensed under MIT — see LICENSE
 ```
 MIT © 2025 Rinco (GitHub: @Rincodev, contact: jacenbo1226@gmail.com)
