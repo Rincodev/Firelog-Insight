@@ -53,9 +53,9 @@ Desktop apps cannot fully hide secrets. Use least-privilege DB roles and rotate 
 ## Team & Contributors
 Bohdan — @Rincodev
 
-Lead, development & release; architecture & security; DB connect/config; DB extract & export; integration & code merging; UI wiring (actions/handlers); charts; exports; stabilization & tests.
+Teamlead, development & release; architecture & security; DB connect/config; DB extract & export; integration & code merging; UI wiring (actions/handlers); charts; exports; stabilization & tests.
 
-Štefan
+Štefan - @Just-Kurumi 
 UI/UX; XAML layouts & visual theme; navigation/menus; tables/grids.
 
 Hanuš — @Menk1l
@@ -66,7 +66,7 @@ Lukáš — @Tykanek
 
 Authentication (Login/Logout); control→logic wiring; IP/time filters; testing.
 
-Contributors: @Menk1l (Hanuš Hart) • @Tykanek (Lukáš Elbl) • @Rincodev (Rinco) • @Just-Kurumi (Kurumi)
+Contributors: @Menk1l (Hanuš Hart) • @Tykanek (Lukáš Elbl) • @Rincodev (Rincodev) • @Just-Kurumi (Kurumi)
 
 ## License
 Licensed under MIT — see [LICENSE](../../LICENSE)
