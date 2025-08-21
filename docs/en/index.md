@@ -1,6 +1,6 @@
 # FireLog-Insight (English)
 
-**Language:** [Čeština](../cs/index.md) • [Русский](../ru/index.md) • [Українська](../uk/index.md)
+**Language:** [Čeština](../cs/index.md) • [Русский](../ru/index.md) • [Українська](../ua/index.md)
 
 ## Overview
 Desktop tool (WPF, .NET) for Windows Firewall log analysis.
