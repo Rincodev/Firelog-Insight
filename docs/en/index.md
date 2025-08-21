@@ -69,6 +69,6 @@ Authentication (Login/Logout); control→logic wiring; IP/time filters; testing.
 Contributors: @Menk1l (Hanuš Hart) • @Tykanek (Lukáš Elbl) • @Rincodev (Rinco) • @Just-Kurumi (Kurumi)
 
 ## License
-Licensed under MIT — see LICENSE
+Licensed under MIT — see [LICENSE](../../LICENSE)
 ```
 MIT © 2025 Rinco (GitHub: @Rincodev, contact: jacenbo1226@gmail.com)
