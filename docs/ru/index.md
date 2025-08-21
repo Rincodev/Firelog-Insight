@@ -1,7 +1,7 @@
 
 # FireLog-Insight (Русский)
 
-**Язык:** [English](../en/index.md) • [Čeština](../cs/index.md) • [Українська](../uk/index.md)
+**Язык:** [English](../en/index.md) • [Čeština](../cs/index.md) • [Українська](../ua/index.md)
 
 ## Обзор
 Настольное приложение (WPF, .NET) для анализа журналов брандмауэра Windows.
