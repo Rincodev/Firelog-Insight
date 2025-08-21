@@ -63,7 +63,7 @@ UI/UX; XAML rozvržení & vizuální téma; navigace/menu; tabulky/mřížky.
 Architektura & integrace data↔UI; filtrování/vyhledávání; integrace PowerShell; lokální zpracování logů; UI bezpečnostních upozornění; parser logů Windows Firewallu; testování.
 
 **Lukáš ——> @Tykanek**  
-Autentizace (Login/Logout); propojení ovládacích prvků→logika; IP/časové filtry; testování.
+UI/UX; Autentizace (Login/Logout); propojení ovládacích prvků→logika; IP/časové filtry; testování.
 
 Přispěvatelé: @Menk1l (Hanuš Hart) • @Tykanek (Lukáš Elbl) • @Rincodev (Rincodev) • @Just-Kurumi (Kurumi)
 
