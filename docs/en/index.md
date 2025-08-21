@@ -12,6 +12,7 @@ Desktop tool (WPF, .NET) for Windows Firewall log analysis.
 ```bash
 dotnet restore
 dotnet build -c Release
+```
 ## Configuration
 Do not commit real credentials. Use env vars or a local file next to the executable.
 
