@@ -72,4 +72,4 @@ Contributors: @Menk1l (Hanuš Hart) • @Tykanek (Lukáš Elbl) • @Rincodev (R
 ## License
 Licensed under MIT — see [LICENSE](../../LICENSE)
 ```
-MIT © 2025 Rinco (GitHub: @Rincodev, contact: jacenbo1226@gmail.com)
+MIT © 2025 Rincodev (GitHub: @Rincodev, contact: jacenbo1226@gmail.com)
