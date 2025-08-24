@@ -31,7 +31,10 @@
   <a href="docs/ru/index.md">Русский</a> •
   <a href="docs/cs/index.md">Čeština</a> •
   <a href="docs/ua/index.md">Українська</a>
+  <br/>
+  <sub><a href="docs/en/index.md">Read more →</a></sub>
 </p>
+
 
 <p align="center">
   <a href="https://www.linkedin.com/in/bohdan-yatsenko-880a4831b/">
