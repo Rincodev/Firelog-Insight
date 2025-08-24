@@ -25,15 +25,19 @@
     <img alt="downloads" src="https://img.shields.io/github/downloads/Rincodev/FireLog-Insight/total?label=downloads">
   </a>
 </p>
-
+<p align="center">
+  <img alt="Read more"
+       src="https://img.shields.io/badge/Read%20more-%E2%86%93-111?style=for-the-badge">
+</p>
 <p align="center">
   <a href="docs/en/index.md"><b>English</b></a> •
   <a href="docs/ru/index.md">Русский</a> •
   <a href="docs/cs/index.md">Čeština</a> •
   <a href="docs/ua/index.md">Українська</a>
-  <br/>
-  <sub><a href="docs/en/index.md">Read more →</a></sub>
 </p>
+
+<h3 align="center"><b>Read more ↓</b></h3>
+
 
 
 <p align="center">
