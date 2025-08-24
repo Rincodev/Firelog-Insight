@@ -24,10 +24,10 @@
 </p>
 
 <p align="center">
-  <a href="README.md"><b>English</b></a> •
-  <a href="docs/ru/README.ru.md">Русский</a> •
-  <a href="docs/cs/README.cs.md">Čeština</a> •
-  <a href="docs/ua/README.ua.md">Українська</a>
+  <a href="docs/en/index.md"><b>English</b></a> •
+  <a href="docs/ru/index.md">Русский</a> •
+  <a href="docs/cs/index.md">Čeština</a> •
+  <a href="docs/ua/index.md">Українська</a>
 </p>
 
 <p align="center">
