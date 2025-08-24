@@ -20,7 +20,6 @@
   <img alt="platform" src="https://img.shields.io/badge/Windows-10%2F11-informational">
 <img alt="build" src="https://img.shields.io/github/actions/workflow/status/Rincodev/FireLog-Insight/ci.yml?label=build">
 <img alt="issues" src="https://img.shields.io/github/issues/Rincodev/FireLog-Insight">
-<img alt="stars" src="https://img.shields.io/github/stars/Rincodev/FireLog-Insight?style=social">
 
   <a href="https://github.com/Rincodev/FireLog-Insight/releases">
     <img alt="downloads" src="https://img.shields.io/github/downloads/Rincodev/FireLog-Insight/total?label=downloads">
