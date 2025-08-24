@@ -4,11 +4,14 @@ obj/
 .vs/
 *.user
 *.suo
-
-# Secrets / local config
-db_credentials.json
-*.secrets.json
-
 # OS
 .DS_Store
 Thumbs.db
+**/publish*/
+dist/
+FireLog_Portable/
+Logs/
+# local configs
+credentials.json
+db_credentials.json
+*.secrets.json

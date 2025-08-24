@@ -1,0 +1,130 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<NoWarn>$(NoWarn);NU1701;CS8981</NoWarn>
+
+		<!-- turn on/off packaging -->
+		<CreatePortablePackage>true</CreatePortablePackage>
+	</PropertyGroup>
+
+	<!-- demo asset -->
+	<ItemGroup>
+		<Content Include="assets\demo\pfirewall_demo.log">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<!-- nuget packages -->
+	<ItemGroup>
+		<PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.6" />
+		<PackageReference Include="Npgsql" Version="9.0.3" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Serilog" Version="4.3.1-dev-02373" />
+		<PackageReference Include="Serilog.Sinks.Debug" Version="3.0.0" />
+		<PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.5" />
+		<PackageReference Include="System.Diagnostics.PerformanceCounter" Version="9.0.5" />
+		<PackageReference Include="System.Management" Version="9.0.5" />
+		<PackageReference Include="System.Security.Permissions" Version="9.0.5" />
+		<!-- Удали MySql пакеты, если ты их не используешь; они только раздувают билд -->
+	</ItemGroup>
+
+	<!-- portable packaging after publish -->
+	<Target Name="PackagePortable" AfterTargets="Publish" Condition="'$(CreatePortablePackage)'=='true'">
+		<PropertyGroup>
+			<DistRoot>$(MSBuildProjectDirectory)\dist\FireLog_Portable\</DistRoot>
+			<AppDir>$(DistRoot)app\</AppDir>
+			<ConfigDir>$(DistRoot)config\</ConfigDir>
+			<DocsDir>$(DistRoot)docs\</DocsDir>
+		</PropertyGroup>
+
+		<Message Importance="high" Text="Packaging portable build to $(DistRoot)" />
+
+		<RemoveDir Directories="$(DistRoot)" ContinueOnError="WarnAndContinue" />
+		<MakeDir Directories="$(AppDir);$(ConfigDir);$(DocsDir)" />
+
+		<ItemGroup>
+			<_PublishedFiles Include="$(PublishDir)**\*.*" />
+		</ItemGroup>
+
+		<Copy SourceFiles="@(_PublishedFiles)"
+			  DestinationFiles="@(_PublishedFiles->'$(AppDir)%(RecursiveDir)%(Filename)%(Extension)')"
+			  SkipUnchangedFiles="true"
+			  ContinueOnError="WarnAndContinue" />
+
+		<WriteLinesToFile File="$(ConfigDir)db_credentials.sample.json" Overwrite="true"
+		  Lines='{"Host":"db.example.com","Port":5432,"Database":"firelog","Username":"firelog_app","Password":"CHANGE_ME","SslMode":"Require"}' />
+
+		<ItemGroup>
+			<StartCmd Include='@echo off' />
+			<StartCmd Include='cd /d "%~dp0app"' />
+			<StartCmd Include='start "" "FireLog.exe"' />
+		</ItemGroup>
+		<WriteLinesToFile File="$(DistRoot)Start FireLog.cmd" Lines="@(StartCmd)" Overwrite="true" />
+
+		<ItemGroup>
+			<Readme Include='FireLog portable build' />
+			<Readme Include='1) Copy config\db_credentials.sample.json -> config\db_credentials.json and fill it.' />
+			<Readme Include='2) Run "Start FireLog.cmd".' />
+		</ItemGroup>
+		<WriteLinesToFile File="$(DocsDir)README.txt" Lines="@(Readme)" Overwrite="true" />
+	</Target>
+	<Target Name="PackagePortable" AfterTargets="Publish">
+		<!-- Folders for the portable distribution -->
+		<PropertyGroup>
+			<DistRoot>$(ProjectDir)dist\FireLog_Portable\</DistRoot>
+			<AppDir>$(DistRoot)app\</AppDir>
+			<ConfigDir>$(DistRoot)config\</ConfigDir>
+			<DocsDir>$(DistRoot)docs\</DocsDir>
+		</PropertyGroup>
+
+		<!-- Clean previous portable output and re-create folders -->
+		<RemoveDir Directories="$(DistRoot)" />
+		<MakeDir Directories="$(AppDir);$(ConfigDir);$(DocsDir)" />
+
+		<!-- Copy published files into app/ preserving subfolders -->
+		<ItemGroup>
+			<_PublishedFiles Include="$(PublishDir)**\*.*" />
+		</ItemGroup>
+		<Copy
+		  SourceFiles="@(_PublishedFiles)"
+		  DestinationFiles="@(_PublishedFiles->'$(AppDir)%(RecursiveDir)%(Filename)%(Extension)')" />
+
+		<!-- Create sample config -->
+		<WriteLinesToFile
+		  File="$(ConfigDir)db_credentials.sample.json"
+		  Overwrite="true"
+		  Lines='{"Host":"db.example.com","Port":5432,"Database":"firelog","Username":"firelog_app","Password":"CHANGE_ME","SslMode":"Require"}' />
+
+		<!-- Create a simple launcher -->
+		<ItemGroup>
+			<StartCmd Include='@echo off' />
+			<StartCmd Include='cd /d "%~dp0app"' />
+			<StartCmd Include='start "" "FireLog.exe"' />
+		</ItemGroup>
+		<WriteLinesToFile
+		  File="$(DistRoot)Start FireLog.cmd"
+		  Lines="@(StartCmd)"
+		  Overwrite="true" />
+
+		<!-- Drop a tiny README -->
+		<ItemGroup>
+			<Readme Include='FireLog portable build' />
+			<Readme Include='1) Copy config\db_credentials.sample.json to app\db_credentials.json and fill it.' />
+			<Readme Include='2) Run "Start FireLog.cmd".' />
+		</ItemGroup>
+		<WriteLinesToFile
+		  File="$(DocsDir)README.txt"
+		  Lines="@(Readme)"
+		  Overwrite="true" />
+	</Target>
+
+</Project>
