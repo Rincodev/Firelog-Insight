@@ -10,8 +10,8 @@
 ---
 
 > Start here: choose your language above.  
-> Full docs live under `/docs/<lang>/index.md`.  
-> # FireLog Insight
+> Full docs live under `/docs/<lang>/index.md`.
+# FireLog Insight
 
 > Lightweight Windows app to parse, explore and export Windows Firewall logs. Clean UI, filters, charts, CSV/PDF export.
 
