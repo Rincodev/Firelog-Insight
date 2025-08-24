@@ -1,6 +1,5 @@
 <p align="center">
-  <!-- увеличил лого ~в 1.5 раза: 160 → 240 -->
-  <img src="docs/assets/logo.png" alt="FireLog Insight logo" width="240">
+  <img src="docs/assets/logo.png" alt="FireLog Insight logo" width="320">
 </p>
 
 <h1 align="center">FireLog Insight</h1>
@@ -10,8 +9,7 @@
 </p>
 
 <p align="center">
-  <!-- замените owner/repo -->
-  <a href="https://github.com/<owner>/<repo>/releases/latest">
+  <a href="https://github.com/<Rincodev>/<Firelog-Insight>/releases/latest">
     <img alt="version" src="https://img.shields.io/github/v/release/<owner>/<repo>?label=version">
   </a>
   <a href="LICENSE">
@@ -32,12 +30,11 @@
   <a href="docs/ua/README.ua.md">Українська</a>
 </p>
 
-<!-- опциональные соц-ссылки: убери строку, если не хочешь светить их -->
 <p align="center">
-  <a href="https://www.linkedin.com/in/<your-handle>/" target="_blank">
+  <a href="https://www.linkedin.com/in/bohdan-yatsenko-880a4831b/" target="_blank">
     <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-follow-0A66C2?logo=linkedin&logoColor=white">
   </a>
-  <a href="https://<your-portfolio-domain>/" target="_blank">
+  <a href="https://bohdan.admstore.cz/en/" target="_blank">
     <img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-visit-111?logo=globe&logoColor=white">
   </a>
 </p>
