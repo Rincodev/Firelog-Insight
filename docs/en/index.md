@@ -42,8 +42,8 @@
 
 4) **You’re ready to go — load your logs and enjoy FireLog Insight!**
 
-[!IMPORTANT]
-If you’ve just enabled Windows Firewall logging, new entries may not appear immediately. Give it a few minutes of normal network activity (or restart the machine) and then try loading the log again.
+>[!IMPORTANT]
+>If you’ve just enabled Windows Firewall logging, new entries may not appear immediately. Give it a few minutes of normal network activity (or restart the machine) and then try loading the log again.
 
 
 ---
