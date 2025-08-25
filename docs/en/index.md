@@ -81,7 +81,6 @@
 
 ### Local file (fallback, not tracked): 
 - Put `db_credentials.json` next to `FireLog.exe` (portable: `app\db_credentials.json`).
-- 
 ```json
 {
   "Host": "aws-0-eu-central-1.pooler.supabase.com",
