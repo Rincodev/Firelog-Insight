@@ -190,18 +190,30 @@ If DB config is missing or invalid, the app shows a tip and reverts to **Local**
 **Which DB is supported?**  
 **PostgreSQL** via **Npgsql**. The expected `users` table contains `id`, `username`, `password_hash`, `remember_token`.
 
----
-
-## License
-Licensed under **MIT** — see [LICENSE](../../LICENSE).
 
 ---
 
-## Credits
-- **Bohdan — @Rincodev** — development & release; architecture & security; DB integration; UI wiring; charts; exports; stabilization & tests.
-- **Štefan — @Just-Kurumi** — UI/UX; XAML layouts & theme; navigation/menus; grids.
-- **Hanuš — @Menk1l** — architecture & data↔UI integration; filtering; PowerShell; log parser; Security Alerts; testing.
-- **Lukáš — @Tykanek** — UI/UX; authentication; filters; testing.
 
-Contributors: @Menk1l • @Tykanek • @Rincodev • @Just-Kurumi
+## Team & Contributors 
 
+**Bohdan ——> @Rincodev** 
+Teamlead, development & release; architecture & security; DB connect/config; DB extract & export; integration & code merging; UI wiring (actions/handlers); charts; exports; stabilization & tests. 
+
+**Štefan ——> @Just-Kurumi** 
+UI/UX; XAML layouts & visual theme; navigation/menus; tables/grids. 
+
+**Hanuš ——> @Menk1l** 
+Architecture & data↔UI integration; filtering/search; PowerShell integration; local log processing; Security Alerts UI; Windows Firewall log parser; testing. 
+
+**Lukáš ——> @Tykanek** 
+UI/UX; Authentication (Login/Logout); control→logic wiring; IP/time filters; testing. 
+
+Contributors: @Menk1l (Hanuš Hart) • @Tykanek (Lukáš Elbl) • @Rincodev (Rincodev) • @Just-Kurumi (Kurumi)
+
+
+---
+
+
+## License 
+Licensed under MIT — see [LICENSE](../../LICENSE)
+MIT © 2025 Rincodev (GitHub: @Rincodev, contact: jacenbo1226@gmail.com)
