@@ -107,10 +107,15 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 
 ---
 
-## User interface guide (by layout)
+## User interface guide
 (Screenshot gallery: `docs/screenshots/`)
 
-**Jump to:** [Top area](#ui-top) • [Table](#ui-table) • [Right panel (stats & charts)](#ui-right) • [Security Alerts (right-bottom)](#ui-alerts) • [Bottom actions (center-right)](#ui-bottom)
+<p align="center">
+  <img src="../screenshots/ui_overview.png" alt="FireLog Insight — full UI overview" width="960">
+</p>
+
+
+### Quick navigation [Top area](#ui-top) • [Table](#ui-table) • [Right panel (stats & charts)](#ui-right) • [Security Alerts (right-bottom)](#ui-alerts) • [Bottom actions (center-right)](#ui-bottom)
 
 ---
 
