@@ -22,9 +22,8 @@
 
 ## Quick start
 1) **Get a build**  
-• Portable release: [Download the latest build](https://github.com/Rincodev/FireLog-Insight/releases/latest) and unzip.
-
-•From source:
+• Portable release: [Download the latest build](https://github.com/Rincodev/FireLog-Insight/releases/latest) and unzip. 
+• From source:
 
 ```bash
  dotnet restore
