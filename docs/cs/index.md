@@ -197,12 +197,6 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 ---
 
 
-## Demo data
-- Ukázkový log firewallu: `assets/demo/pfirewall_demo.log`.
-- V aplikaci je můžete načíst tlačítkem **Load Demo** a ověřit parsování, filtry a grafy bez práce s reálnými logy.
-
----
-
 ## Logování (Serilog)
 - Logy se zapisují do `logs/firelog-.log` (denní rotace, UTF‑8) a do Debug sinku během vývoje.
 - Konfigurace při startu je v `App.xaml.cs`:
