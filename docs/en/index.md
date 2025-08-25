@@ -176,11 +176,6 @@ Log.Logger = new LoggerConfiguration()
 
 ---
 
-## Demo data
-- Sample firewall log: `assets/demo/pfirewall_demo.log`.
-- Use it to verify parsing, filters, and charts without touching real logs.
-
----
 
 ## FAQ
 **Is DB required?**  
