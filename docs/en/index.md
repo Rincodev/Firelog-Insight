@@ -110,51 +110,100 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 ## User interface guide
 (Screenshot gallery: `docs/screenshots/`)
 
+<p align="center">
+  <img src="../screenshots/ui_overview.png" alt="FireLog Insight — full UI overview" width="960">
+</p>
+
+### Quick navigation
+[Top bar](#ui-topbar) • [Filters panel](#ui-filters) • [Table](#ui-table) • [Stats & charts](#ui-stats) • [Security Alerts](#ui-alerts) • [Bottom bar](#ui-bottom)
+
+---
+
+<a id="ui-topbar"></a>
 ### 1) Top bar / actions
-- **Open Log** — choose `pfirewall.log` to load entries.
-- **Export CSV** — saves the **current filtered table** to CSV.
-- **Export Chart (PNG)** — saves the **visible chart** (pie/bar) to PNG.
-- **Data Source** — *Local* vs *Database*. If DB is not configured, the app forces *Local* and shows a tip once.
-- **Login / Logout** — PostgreSQL authentication; supports "Remember me".
+<p>
+  <img src="../screenshots/ui_topbar_box.png" alt="Top bar — open log, export, data source, login/logout" width="960">
+</p>
 
+- **Open Log** — choose `pfirewall.log` (or any compatible text log) to load entries.  
+- **Data Source** — *Local* vs *Database*. If DB isn’t configured, the app stays in *Local* and shows a tip once.  
+- **Login / Logout** — PostgreSQL authentication; supports **Remember me**.  
+- **Export CSV** — saves the **current filtered table** to CSV.  
+- **Export Chart (PNG)** — saves the **visible chart** (pie/bar) as an image.
+
+---
+
+<a id="ui-filters"></a>
 ### 2) Filters panel
-- **Time range** — From / To.
-- **Action** — All / Allow / Drop (also matches “Block”).
-- **IP contains** — substring match against Source or Destination IP.
-- **Port contains** — substring match against Source or Destination Port.
-- **Apply / Clear** — run or reset filters.
+<p>
+  <img src="../screenshots/ui_filters_box.png" alt="Filters panel — time, action, IP, port, apply/reset" width="960">
+</p>
 
+- **Time range** — *From* / *To*.  
+- **Action** — *All* / *Allow* / *Drop* (also matches “Block”).  
+- **IP contains** — substring match against **Source IP** and **Destination IP**.  
+- **Port contains** — substring match against **Source Port** and **Destination Port**.  
+- **Apply Filters / Reset Filters** — apply or clear filters.
 
-### 3) Table
-- Columns: Timestamp, Action, Protocol, Source IP/Port, Destination IP/Port, User ID.
-- Rows reflect the active filters.
-  
 > [!TIP]
-> Click any column header to **sort** ascending/descending (e.g., by Protocol, Time, Port, IP).
-> 
-> **Resize columns** by dragging the header borders (Excel-style).
-> 
-> Double-click a header border to auto-fit width (if enabled by your system theme).
+> There is **no Protocol filter** here; use **table sorting** by the *Protocol* column (see below).
 
+---
 
-### 4) Charts
-- **Pie** — Allowed vs Blocked.
-- **Protocol Distribution** — bar chart of protocol counts.
-- Switch charts using the chart selector.
-  
-> [!WARNING]
+<a id="ui-table"></a>
+### 3) Table (events list)
+<p>
+  <img src="../screenshots/ui_table_box.png" alt="Events table — sortable headers, resizable columns" width="960">
+</p>
+
+- Columns: **Time**, **Action**, **Protocol**, **Source IP/Port**, **Destination IP/Port**, **User ID**.  
+- Rows reflect the **active filters**.
+
+> [!TIP]
+> Click any column header to **sort** ascending/descending (e.g., by **Protocol**, **Time**, **Port**, **IP**).  
+> **Resize columns** by dragging header borders (Excel-style).  
+> Double-click a header border to auto-fit width (if supported by your system theme).
+
+---
+
+<a id="ui-stats"></a>
+### 4) Stats & charts (right panel)
+<p>
+  <img src="../screenshots/ui_stats_box.png" alt="Right panel — chart selector, totals, actions" width="960">
+</p>
+
+- **Chart selector** — `Pie Chart` / `Protocol Distribution`.  
+- **Pie** — Allowed vs Blocked.  
+- **Protocol Distribution** — bar chart of protocol counts.  
+- **Totals** — counters for Total / Allowed / Blocked.  
+- Project-specific actions (if enabled): **Enable Logs**, **Extract Data**, **Upload to DB**.
+
+> [!IMPORTANT]
 > All charts are computed from the **currently filtered** entries.
 
+---
 
-### 5) Export
-- **CSV** — exports all rows **after filters** are applied.
-- **TXT** — exports all rows **after filters** in plain text format.
-- **PNG** — exports the current chart as an image.
+<a id="ui-alerts"></a>
+### 5) Security Alerts
+<p>
+  <img src="../screenshots/ui_alerts_box.png" alt="Security Alerts — suspicious ports and unusual outgoing traffic" width="960">
+</p>
 
+- Simple heuristics over the loaded log, e.g. **Suspicious ports**, **Unusual outgoing traffic**.  
+- Intended as pointers for manual review — not a replacement for IDS/IPS.
 
-### 6) Demo data
-- Sample firewall log: `assets/demo/pfirewall_demo.log`.
-- You can load the demo log via the **Load Demo** button in the app to verify parsing, filters, and charts without touching real logs.
+---
+
+<a id="ui-bottom"></a>
+### 6) Bottom bar (actions)
+<p>
+  <img src="../screenshots/ui_bottombar_box.png" alt="Bottom bar — load demo data, export reports, export chart" width="960">
+</p>
+
+- **Load Demo Data** — loads `assets/demo/pfirewall_demo.log` with one click (handy to verify parsing/filters/charts).  
+- **Export Reports** — exports the filtered table as **CSV** and **TXT**.  
+- **Export Chart** — saves the current chart as **PNG**.
+
 
 
 ---
