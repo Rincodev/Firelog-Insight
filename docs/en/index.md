@@ -111,7 +111,7 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 (Screenshot gallery: `docs/screenshots/`)
 
 <p align="center">
-  <img src="../screenshots/ui_overview.png" alt="FireLog Insight — full UI overview" width="960">
+  <img src="../screenshots/ui_overview.png" alt="FireLog Insight — full UI overview" width="720">
 </p>
 
 
@@ -122,7 +122,7 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 <a id="ui-top"></a>
 ### Top area — Filters & session
 <p>
-  <img src="../screenshots/ui_top_area.png" alt="Top area — filters, data source, user box, apply/reset" width="960">
+  <img src="../screenshots/ui_top_area.png" alt="Top area — filters, data source, user box, apply/reset" width="800">
 </p>
 
 - **Filters**
@@ -147,7 +147,7 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 <a id="ui-table"></a>
 ### Table — Events list (center)
 <p>
-  <img src="../screenshots/ui_table.png" alt="Events table — sortable headers, resizable columns" width="960">
+  <img src="../screenshots/ui_table.png" alt="Events table — sortable headers, resizable columns" width="600">
 </p>
 
 - Columns: **Time**, **Action**, **Protocol**, **Source IP/Port**, **Destination IP/Port**, **User ID**.
@@ -163,7 +163,7 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 <a id="ui-right"></a>
 ### Right panel — Stats & charts
 <p>
-  <img src="../screenshots/ui_right_panel.png" alt="Right panel — chart selector, totals, actions" width="960">
+  <img src="../screenshots/ui_right_panel.png" alt="Right panel — chart selector, totals, actions" width="380">
 </p>
 
 - **Chart selector** — `Pie Chart` / `Protocol Distribution`.  
@@ -184,7 +184,7 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 <a id="ui-alerts"></a>
 ### Security Alerts — right-bottom
 <p>
-  <img src="../screenshots/ui_alerts.png" alt="Security Alerts — suspicious ports and unusual outgoing traffic" width="960">
+  <img src="../screenshots/ui_alerts.png" alt="Security Alerts — suspicious ports and unusual outgoing traffic" width="680">
 </p>
 
 - Heuristics that flag things like **Suspicious ports** and **Unusual outgoing traffic**.  
@@ -195,7 +195,7 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 <a id="ui-bottom"></a>
 ### Bottom actions — center-right
 <p>
-  <img src="../screenshots/ui_bottom_actions.png" alt="Bottom actions — load demo, export reports (CSV/TXT), export chart" width="960">
+  <img src="../screenshots/ui_bottom_actions.png" alt="Bottom actions — load demo, export reports (CSV/TXT), export chart" width="360">
 </p>
 
 - **Load Demo Data** — loads `assets/demo/pfirewall_demo.log` with one click (handy to verify parsing/filters/charts).
