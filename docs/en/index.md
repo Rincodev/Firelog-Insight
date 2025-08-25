@@ -142,7 +142,7 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 - **Protocol Distribution** — bar chart of protocol counts.
 - Switch charts using the chart selector.
   
-> [!CAUTION]
+> [!WARNING]
 > All charts are computed from the **currently filtered** entries.
 
 
