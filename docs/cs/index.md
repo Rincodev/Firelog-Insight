@@ -187,8 +187,10 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 - Zobrazené řádky vždy odpovídají aktivním filtrům.
 
 > [!TIP]
-> Kliknutím na hlavičku sloupce zapnete **řazení** vzestupně/sestupně (např. podle Protocol, Time, Port, IP).  
+> Kliknutím na hlavičku sloupce zapnete **řazení** vzestupně/sestupně (např. podle Protocol, Time, Port, IP).
+> 
 > **Šířku sloupců** změníte tažením okrajů hlaviček (podobně jako v Excelu).
+> 
 > Dvojklik na okraj může šířku auto‑přizpůsobit (pokud to dovolí vaše téma systému).
 
 
