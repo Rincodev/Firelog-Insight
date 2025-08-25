@@ -16,10 +16,13 @@
 - **Offline režim**, pokud DB není nakonfigurována.
 - Strukturované logování přes **Serilog** (soubor + debug sink).
 
+
 ---
 
+
 ## Rychlý start
-1) **Získejte build**  
+1) **Získejte build**
+   
 • Portable release: [stáhnout poslední verzi](https://github.com/Rincodev/FireLog-Insight/releases/latest) a rozbalit.  
 
 • Ze zdrojových kódů:
@@ -43,7 +46,9 @@ dotnet build -c Release
 > Pokud jste logování Windows Firewallu právě zapnuli, nové záznamy se nemusejí objevit hned.
 > Nechte systém pár minut běžně komunikovat po síti (případně restartujte počítač) a zkuste log načíst znovu.
 
+
 ---
+
 
 ## Konfigurace
 > [!TIP]
@@ -99,17 +104,41 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 - Po zaškrtnutí aplikace vytvoří per‑user `remember_token` v DB a uloží lokální `credentials.json` vedle spustitelného souboru.  
 - Při **Logout** se token v DB smaže a lokální soubor se odstraní.
 
+
 ---
 
-## Uživatelské rozhraní
 
+## Uživatelské rozhraní
+(Screenshot gallery: `docs/screenshots/`)
+
+<p align="center">
+  <img src="../screenshots/ui_overview.png" alt="FireLog Insight — full UI overview" width="720">
+</p>
+
+
+### Rychlá navigace: [Horní lišta](#ui-top) • [Pravý panel](#ui-right) • [Security Alerts](#ui-alerts) • [Spodní lišta](#ui-bottom) • [Tabulka](#ui-table)
+
+<a id="ui-top"></a>
 ### Horní lišta
-- **Filtry** — časové rozmezí, Action (All/Allow/Drop), IP obsahuje, Port obsahuje.
+<p>
+  <img src="../screenshots/ui_top_area.png" alt="Top area — filters, data source, user box, apply/reset" width="800">
+</p>
+
+- **Filtry** — časové rozmezí, Action (All/Allow/Drop), IP(src/dest), Port(src/dest).
 - **Data Source** — *Local* vs *Database*. Pokud DB není dostupná/platná, aplikace přepne na *Local* a jednou zobrazí tip.
 - **Apply Filters / Reset Filters** — spustí / vyčistí filtry.
 - **Logout** — odhlášení z DB (okno nahoře zobrazuje aktuálního uživatele).
 
+
+   ---
+
+  
+<a id="ui-right"></a>
 ### Pravý panel
+<p>
+  <img src="../screenshots/ui_right_panel.png" alt="Right panel — chart selector, totals, actions" width="380">
+</p>
+
 - **Stats & Charts** — sumarizace a přepínač grafů (Pie / Protocol Distribution).
 - **Enable Logs** — zapnutí systémového logování (pokud je dostupné).
 - **Extract Data** — vytažení logů z lokálního souboru nebo z DB (bez speciální transformace).
@@ -118,15 +147,42 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 > [!WARNING]
 > Všechny grafy se počítají z **aktuálně filtrovaných** záznamů.
 
-### Pravý panel (dole)
+
+  ---
+
+  
+<a id="ui-alerts"></a>
+### Security Alerts
+<p>
+  <img src="../screenshots/ui_alerts.png" alt="Security Alerts — suspicious ports and unusual outgoing traffic" width="450">
+</p>
+
 - **Security Alerts** — panel pro upozornění na podezřelé aktivity.
 
-### Spodní lišta (mírně vpravo od středu)
+
+   ---
+
+  
+<a id="ui-bottom"></a>
+### Spodní lišta
+<p>
+  <img src="../screenshots/ui_bottom_actions.png" alt="Bottom actions — load demo, export reports (CSV/TXT), export chart" width="360">
+</p>
+
 - **Load demo data** — načte ukázkové logy.
 - **Export reports (CSV/TXT)** — exportuje **filtrovanou tabulku**.
 - **Export chart (PNG)** — uloží aktuálně zobrazený graf jako obrázek.
 
+
+  ---
+
+  
+<a id="ui-table"></a>
 ### Tabulka
+<p>
+  <img src="../screenshots/ui_table.png" alt="Events table — sortable headers, resizable columns" width="600">
+</p>
+
 - Sloupce: Timestamp, Action, Protocol, Source IP/Port, Destination IP/Port, User ID.
 - Zobrazené řádky vždy odpovídají aktivním filtrům.
 
@@ -135,7 +191,9 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 > **Šířku sloupců** změníte tažením okrajů hlaviček (podobně jako v Excelu).
 > Dvojklik na okraj může šířku auto‑přizpůsobit (pokud to dovolí vaše téma systému).
 
+
 ---
+
 
 ## Demo data
 - Ukázkový log firewallu: `assets/demo/pfirewall_demo.log`.
