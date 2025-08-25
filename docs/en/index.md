@@ -115,7 +115,7 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 </p>
 
 
-### Quick navigation [Top area](#ui-top) • [Table](#ui-table) • [Right panel (stats & charts)](#ui-right) • [Security Alerts (right-bottom)](#ui-alerts) • [Bottom actions (center-right)](#ui-bottom)
+### Quick navigation [Top area](#ui-top) • [Table](#ui-table) • [Right panel (stats & charts)](#ui-right) • [Security Alerts](#ui-alerts) • [Bottom actions](#ui-bottom)
 
 ---
 
