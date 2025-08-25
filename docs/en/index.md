@@ -54,11 +54,16 @@
 > Do **not** commit real credentials.
 > Prefer **environment variables**.
 >
+> 
 > **Environment variables are not files** — they must be set in the OS or in your launcher script.
 >
+> 
 > **Portable build:** edit `Start FireLog.cmd` to set environment variables before launching the app.
->                                  **OR**
->                                                                   place `db_credentials.json` next to `FireLog.exe` in the `app/` folder
+>
+> **OR**
+>
+> place `db_credentials.json` next to `FireLog.exe` in the `app/` folder
+>
 > 
 > A local `db_credentials.json` next to the executable is supported as a fallback.
 
