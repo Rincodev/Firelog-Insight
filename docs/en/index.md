@@ -8,21 +8,21 @@
 **FireLog Insight** is a lightweight **WPF (.NET 8)** desktop tool for parsing and visualizing **Windows Firewall** logs.
 
 - Load `pfirewall.log` (or the sample in `assets/demo`).
-- Filter by **Action** (Allow/Drop), **Protocol**, **IP**, **Port**, and **Time**.
+- Filter by **Action** (Allow/Drop), **IP**, **Port**, and **Time**.
+- Sort by **Action** (Allow/Drop), **Protocol**, **IP**, **Port**, and **Time**.
 - Visualize with **Pie** (Allowed vs Blocked) and **Protocol Distribution** (bar).
 - Export filtered data to **CSV** and the current chart to **PNG**.
 - Optional **PostgreSQL** mode (via **Npgsql**) with "Remember me".
 - **Offline mode** when no DB is configured.
 - Structured logging via **Serilog** (file + debug sinks).
 
-> [!TIP]
-> TL;DR — import → filter → explore → export.
 
 ---
 
+
 ## Quick start
 1) **Get a build**  
-• Portable release: download from GitHub Releases and unzip.  
+• Portable release: [Download the latest build](https://github.com/Rincodev/FireLog-Insight/releases/latest) and unzip.
 • From source:
 
 ```bash
@@ -30,31 +30,45 @@
  dotnet build -c Release
 ```
 
-2) **(Optional) Configure database** — see **Configuration** below. If you skip this, the app starts in **Offline mode**.
+2) **(Optional) Configure database** — see **[Configuration](#configuration)**.
+
+> [!CAUTION]
+> If you skip this, the app starts in **Offline mode**.
 
 3) **Run the app**  
 • Portable: run `Start FireLog.cmd` (keeps DLLs inside the `app/` folder).  
 • Or run `FireLog.exe` directly.
 
-4) **Load logs → apply filters → view charts → export CSV/PNG.**
+4) **You’re ready to go — load your logs and enjoy FireLog Insight!**
+
+[!IMPORTANT]
+If you’ve just enabled Windows Firewall logging, new entries may not appear immediately. Give it a few minutes of normal network activity (or restart the machine) and then try loading the log again.
+
 
 ---
 
+
 ## Configuration
 > [!IMPORTANT]
+> **Portable build:** place `db_credentials.json` next to `FireLog.exe` in the `app/` folder **OR** edit `Start FireLog.cmd` to set environment variables before launching the app.
+> **Environment variables are not files** — they must be set in the OS or in your launcher script. 
 > Do **not** commit real credentials. Prefer **environment variables**. A local `db_credentials.json` next to the executable is supported as a fallback.
 
-### Environment variables (recommended)
-```
-APP_DB_HOST=aws-0-eu-central-1.pooler.supabase.com
-APP_DB_PORT=5432
-APP_DB_USER=postgres.<instance-id>
-APP_DB_PASSWORD=<secret>
-APP_DB_NAME=postgres
-APP_DB_SSLMODE=Require
-```
+### Environment variables (recommended for CI/ops)
+- Set them at the user/machine level in Windows, **or** edit the launcher:
+  ```bat
+  @echo off
+  set APP_DB_HOST=your-host
+  set APP_DB_PORT=5432
+  set APP_DB_USER=firelog_app
+  set APP_DB_PASSWORD=***secret***
+  set APP_DB_NAME=firelog
+  set APP_DB_SSLMODE=Require
+  start "" "FireLog.exe"
 
-### Local file (fallback, not tracked): `db_credentials.json`
+### Local file (fallback, not tracked): 
+- Put `db_credentials.json` next to `FireLog.exe` (portable: `app\db_credentials.json`).
+- 
 ```json
 {
   "Host": "aws-0-eu-central-1.pooler.supabase.com",
@@ -92,29 +106,42 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 - **Login / Logout** — PostgreSQL authentication; supports "Remember me".
 
 ### 2) Filters panel
-- **Time range** — from / to.
-- **Action** — All / Allow / Drop (also matches Block).
-- **Protocol** — TCP, UDP, ICMP, or All.
-- **IP / Port contains** — substring filters for source/destination IP and ports.
+- **Time range** — From / To.
+- **Action** — All / Allow / Drop (also matches “Block”).
+- **IP contains** — substring match against Source or Destination IP.
+- **Port contains** — substring match against Source or Destination Port.
 - **Apply / Clear** — run or reset filters.
+
 
 ### 3) Table
 - Columns: Timestamp, Action, Protocol, Source IP/Port, Destination IP/Port, User ID.
-- Rows reflect the **active filters**.
+- Rows reflect the active filters.
+  
+> [!TIP]
+> Click any column header to **sort** ascending/descending (e.g., by Protocol, Time, Port, IP).
+> **Resize columns** by dragging the header borders (Excel-style).
+> Double-click a header border to auto-fit width (if enabled by your system theme).
+
 
 ### 4) Charts
-- **Pie** — Allowed vs Blocked (computed from the current filtered list).
+- **Pie** — Allowed vs Blocked.
 - **Protocol Distribution** — bar chart of protocol counts.
-- Switch charts using the chart selector (e.g., "Pie Chart", "Protocol Distribution").
+- Switch charts using the chart selector.
+  
+> [!CAUTION]
+> All charts are computed from the **currently filtered** entries.
 
----
 
-## Export
+### 5) Export
 - **CSV** — exports all rows **after filters** are applied.
-- **PNG** — exports the current chart at UI scale using a DPI‑aware capture to avoid clipping.
+- **TXT** — exports all rows **after filters** in plain text format.
+- **PNG** — exports the current chart as an image.
 
-> [!TIP]
-> If a chart looks clipped in the image, try switching chart type once or updating the chart, then export again.
+
+### 6) Demo data
+- Sample firewall log: `assets/demo/pfirewall_demo.log`.
+- You can load the demo log via the **Load Demo** button in the app to verify parsing, filters, and charts without touching real logs.
+
 
 ---
 
