@@ -105,7 +105,9 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 - When checked, the app creates a per‑user `remember_token` in the DB and writes a local `credentials.json` next to the executable.  
 - On **Logout**, the token is cleared from DB and the local file is deleted.
 
+
 ---
+
 
 ## User interface guide
 (Screenshot gallery: `docs/screenshots/`)
