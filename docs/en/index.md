@@ -139,8 +139,6 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
   - The user box shows the current identity (e.g., **User: Offline** or the logged-in username).
   - **Logout** clears the active session; there is **no “Login” button** in this view.
 
-> [!NOTE]
-> Protocol isn’t a filter here — use **table sorting by the Protocol column** (see below).
 
 ---
 
@@ -150,18 +148,20 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
   <img src="../screenshots/ui_table.png" alt="Events table — sortable headers, resizable columns" width="600">
 </p>
 
-- Columns: **Time**, **Action**, **Protocol**, **Source IP/Port**, **Destination IP/Port**, **User ID**.
+- Columns: **Time**, **Action**, **Protocol**, **Source IP/Port**, **Destination IP/Port**.
 - The table always reflects the **active filters**.
 
 > [!TIP]
-> Click any column header to **sort** ascending/descending (e.g., by **Protocol**, **Time**, **Port**, **IP**).  
-> **Resize columns** by dragging header borders (Excel-style).  
+> Click any column header to **sort** ascending/descending (e.g., by **Protocol**, **Time**, **Port**, **IP**).
+> 
+> **Resize columns** by dragging header borders (Excel-style).
+> 
 > Double-click a header border to auto-fit width (if supported by your system theme).
 
 ---
 
 <a id="ui-right"></a>
-### Right panel — Stats & charts
+### Right panel (Stats & charts) 
 <p>
   <img src="../screenshots/ui_right_panel.png" alt="Right panel — chart selector, totals, actions" width="380">
 </p>
@@ -182,9 +182,9 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 ---
 
 <a id="ui-alerts"></a>
-### Security Alerts — right-bottom
+### Security Alerts
 <p>
-  <img src="../screenshots/ui_alerts.png" alt="Security Alerts — suspicious ports and unusual outgoing traffic" width="680">
+  <img src="../screenshots/ui_alerts.png" alt="Security Alerts — suspicious ports and unusual outgoing traffic" width="450">
 </p>
 
 - Heuristics that flag things like **Suspicious ports** and **Unusual outgoing traffic**.  
@@ -193,7 +193,7 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
 ---
 
 <a id="ui-bottom"></a>
-### Bottom actions — center-right
+### Bottom actions
 <p>
   <img src="../screenshots/ui_bottom_actions.png" alt="Bottom actions — load demo, export reports (CSV/TXT), export chart" width="360">
 </p>
