@@ -131,7 +131,9 @@ SslMode={SslMode};Timeout=15;Command Timeout=30;Keepalive=60
   
 > [!TIP]
 > Click any column header to **sort** ascending/descending (e.g., by Protocol, Time, Port, IP).
+> 
 > **Resize columns** by dragging the header borders (Excel-style).
+> 
 > Double-click a header border to auto-fit width (if enabled by your system theme).
 
 
@@ -197,15 +199,19 @@ If DB config is missing or invalid, the app shows a tip and reverts to **Local**
 ## Team & Contributors 
 
 **Bohdan ——> @Rincodev** 
+
 Teamlead, development & release; architecture & security; DB connect/config; DB extract & export; integration & code merging; UI wiring (actions/handlers); charts; exports; stabilization & tests. 
 
 **Štefan ——> @Just-Kurumi** 
+
 UI/UX; XAML layouts & visual theme; navigation/menus; tables/grids. 
 
 **Hanuš ——> @Menk1l** 
+
 Architecture & data↔UI integration; filtering/search; PowerShell integration; local log processing; Security Alerts UI; Windows Firewall log parser; testing. 
 
 **Lukáš ——> @Tykanek** 
+
 UI/UX; Authentication (Login/Logout); control→logic wiring; IP/time filters; testing. 
 
 Contributors: @Menk1l (Hanuš Hart) • @Tykanek (Lukáš Elbl) • @Rincodev (Rincodev) • @Just-Kurumi (Kurumi)
@@ -216,4 +222,5 @@ Contributors: @Menk1l (Hanuš Hart) • @Tykanek (Lukáš Elbl) • @Rincodev (R
 
 ## License 
 Licensed under MIT — see [LICENSE](../../LICENSE)
+
 MIT © 2025 Rincodev (GitHub: @Rincodev, contact: jacenbo1226@gmail.com)
