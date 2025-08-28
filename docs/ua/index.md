@@ -1,6 +1,6 @@
 # FireLog Insight — Документація (UA)
 
-**Мова:** [Čeština](../cs/index.md) • [Русский](../ru/index.md) • [Українська](../ua/index.md)
+**Мова:** [Čeština](../cs/index.md) • [Русский](../ru/index.md) • [English](../en/index.md)
 
 ---
 
