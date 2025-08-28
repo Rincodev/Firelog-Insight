@@ -40,7 +40,7 @@
   <a href="docs/en/index.md">
     <img src="https://img.shields.io/badge/Read%20the%20Docs-%F0%9F%93%98-1976D2?style=for-the-badge" alt="Read the Docs">
   </a>
-  <a href="https://github.com/<owner>/<repo>/releases/latest">
+  <a href="https://github.com/Rincodev/Firelog-Insight/releases/latest">
     <img src="https://img.shields.io/badge/Download-%F0%9F%93%A6-FF9800?style=for-the-badge" alt="Download">
   </a>
 </p>
