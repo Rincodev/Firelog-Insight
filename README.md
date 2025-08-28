@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/<Rincodev>/<Firelog-Insight>/releases/latest">
+  <a href="https://github.com/Rincodev/Firelog-Insight/releases/latest">
     <img alt="version" src="https://img.shields.io/github/v/release/<Rincodev>/<Firelog-Insight>?label=version">
   </a>
   <a href="LICENSE">
