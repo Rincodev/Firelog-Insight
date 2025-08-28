@@ -18,8 +18,8 @@
   <img alt=".NET" src="https://img.shields.io/badge/.NET-8.0-512BD4">
   <img alt="WPF" src="https://img.shields.io/badge/WPF-Desktop-5C2D91">
   <img alt="platform" src="https://img.shields.io/badge/Windows-10%2F11-informational">
-  <a href="https://github.com/<Rincodev>/<Firelog-Insight>/releases">
-    <img alt="downloads" src="https://img.shields.io/github/downloads/<Rincodev>/<Firelog-Insight>/total?label=downloads">
+  <a href="https://github.com/Rincodev/Firelog-Insight/releases">
+    <img alt="downloads" src="https://img.shields.io/github/downloads/Rincodev/Firelog-Insight/total?label=downloads">
   </a>
 </p>
 
