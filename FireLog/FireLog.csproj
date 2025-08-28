@@ -34,7 +34,6 @@
 		<PackageReference Include="System.Diagnostics.PerformanceCounter" Version="9.0.5" />
 		<PackageReference Include="System.Management" Version="9.0.5" />
 		<PackageReference Include="System.Security.Permissions" Version="9.0.5" />
-		<!-- Удали MySql пакеты, если ты их не используешь; они только раздувают билд -->
 	</ItemGroup>
 
 	<!-- portable packaging after publish -->

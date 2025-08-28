@@ -31,7 +31,7 @@ namespace FireLog
                 {
                     conn.Open();
 
-                    // Проверка: существует ли пользователь
+                   
                     string checkUserQuery = "SELECT COUNT(*) FROM users WHERE username = @username";
                     using (var checkCmd = new NpgsqlCommand(checkUserQuery, conn))
                     {
@@ -45,14 +45,15 @@ namespace FireLog
                         }
                     }
 
-                    // Хеширование пароля
+               
                     string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
 
-                    // Вставка пользователя
+                   
+                   
                     string insertQuery = "INSERT INTO users (id, username, password_hash) VALUES (@id, @username, @password)";
                     using (var insertCmd = new NpgsqlCommand(insertQuery, conn))
                     {
-                        Guid userId = Guid.NewGuid(); // Явно задаём UUID
+                        Guid userId = Guid.NewGuid(); 
                         AppState.CurrentUserId = userId;
 
                         insertCmd.Parameters.AddWithValue("@id", userId);
